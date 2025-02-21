@@ -1,7 +1,7 @@
 {
   "name": "Consumos Pienso",
   "short_name": "Piensos",
-  "start_url": "https://oscherrero.github.io/demopp",
+  "start_url": "/demopp",
   "display": "fullscreen",  
   "theme_color": "#000000",
   "background_color": "#ffffff",
