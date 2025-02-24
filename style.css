@@ -30,6 +30,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+position:sticky; 
+top:0; 
     }
 
     header  img{
@@ -214,7 +216,10 @@
       background-color: var(--color-acento);
       color: white;
       display: flex;
-      align-items: center;
+position:sticky; 
+top:0; 
+  //    align-items: center;
+
     }
 
     footer p {
