@@ -28,8 +28,9 @@
       padding: calc(var(--header-size)*0.15);
 
       display: flex;
-position:sticky; 
-top:0; 
+      position:sticky; 
+      top:0; 
+      z-index: 1;
 //justify-content: space-between;
  //     align-items: center;
     }
@@ -71,7 +72,7 @@ top:0;
     }
 
     header nav {
-      z-index: 1;
+   
       height: 100vh;
       padding: 5vh 5vw;
       position: fixed;
@@ -216,10 +217,9 @@ top:0;
       background-color: var(--color-acento);
       color: white;
       display: flex;
-position:sticky; 
-bottom:0; 
+      position:sticky; 
+      bottom:0; 
      align-items: center;
-
     }
 
     footer p {
