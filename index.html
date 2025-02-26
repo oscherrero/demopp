@@ -72,7 +72,6 @@
       var tema=localStorage.getItem("tema")!=null?parseInt(localStorage.getItem("tema"))-1:10;
       localStorage.setItem("tema",tema)
       cambiarTema()
-      mostrarMenuChiste()
  
       const devicePixelRatio = window.devicePixelRatio;
       if (devicePixelRatio <= 2) {
@@ -152,14 +151,6 @@
               elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
               elemTitulo.innerHTML="CHISTE MALO";
           })
-    }
-
-    function mostrarMenuChiste() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const chistes = urlParams.get('chistes');
-        if (chistes=="si"){
-          document.getElementById("menuItemChiste").classList.remove("oculto");
-        }
     }
 
     function acercade(){ 
