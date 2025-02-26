@@ -21,6 +21,7 @@
       <ul>
         <li onClick="closeMenu(); verLogForm()">SELECCIONAR GRANJA</li>
         <li onClick="closeMenu(); cambiarTema()">CAMBIAR TEMA</li>
+        <li onClick="closeMenu(); cambiarTema()" class=""<oculto>CAMBIAR TEMA</li>
         <li onClick="closeMenu(); acercade()">ACERCA DE</li>
       </ul>
     </nav>
@@ -151,6 +152,14 @@
               elem1.innerHTML= "<div class='marco chiste'>" + data + "</div>";
               elemTitulo.innerHTML="CHISTE MALO";
           })
+    }
+
+    function mostrarMenuChiste() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const chistes = urlParams.get('chistes');
+        if (chistes=si){
+          document.getElementById("logForm").classList.remove("oculto");
+        }
     }
 
     function acercade(){ 
