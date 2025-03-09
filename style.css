@@ -1,240 +1,225 @@
 
-    * {
-      box-sizing: border-box;
-    }
+* {
+  box-sizing: border-box;
+}
 
-    :root {
-      --color-principal: cyan;
-      --color-secundario: pink;
-      --color-acento: red;
-      --color-blanco: white; 
-      --header-size: 16vw;
-      font-family: "Roboto", "Arial";
-      font-size: 4vw;
-    }
+:root {
+  --color-principal: cyan;
+  --color-secundario: pink;
+  --color-acento: red;
+  --color-blanco: white; 
+  font-family: "Roboto", "Arial";
+  font-size: 4vw;
+}
 
-    body {
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0; 
+  padding:0;
+}
 
-    header {
-      height: var(--header-size);
-      background-color: var(--color-acento);
-      color: var(--color-blanco);
-      padding: calc(var(--header-size)*0.15);
+header {
+  height: 4rem;
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  padding: 0.6rem;
 
-      display: flex;
-      position:sticky; 
-      top:0; 
-      z-index: 1;
-//justify-content: space-between;
- //     align-items: center;
-    }
+  display: flex;
+  align-items: center;
+  position:sticky; 
+  top:0;   
+  z-index: 1;
 
-    header  img{
-      height:100%;
-      //max-height: 100%;
-      //padding: calc(var(--header-size)*0.15);
-      box-sizing: border-box;
-      background: white;
-    }
+  display: flex;
+  align-items: center;
+}
 
-    header .titulo {
-      color: var(--color-blanco);
-      font-family: "Arial";
-      font-size: calc(var(--header-size)*0.5);
+header  img{
+  height:100%;
+  box-sizing: border-box;
+  background: white;
+}
 
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
-    }
+header .titulo {
+  color: var(--color-blanco);
+  font-family: "Arial";
+  font-size: 2rem;
 
-    header .menu-burger {
-      padding: calc(var(--header-size)*0.1);
-      height: 70%;
-      aspect-ratio: 1;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+}
 
-    header .menu-burger span {
-      display: block;
-      width: 100%;
-      height: 15%; 
-      background: white;
-      border-radius: 10%;
-    }
+header .menu-burger {
+  padding: 0.4rem; 
+  height: 70%;
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    header nav {
-   
-      height: 100vh;
-      padding: 5vh 5vw;
-      position: fixed;
-      top: var(--header-size);
-      right: -60%;
-      width: 60%;
-      transition: right 0.2s ease-in-out;
+header .menu-burger span {
+  display: block;
+  width: 100%;
+  height: 15%; 
+  background: white;
+  border-radius: 10%;
+}
 
-      border-radius: 5vw 0 0 0;
-      background-color: var(--color-acento);
+header nav {
+z-index:1;
+  height: 100vh;
+  padding: 5vh 5vw;
+  position: fixed;
+  top: 4rem;
+  right: -60%;
+  width: 60%;
+  transition: right 0.2s ease-in-out;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: left;
+  border-radius: 5vw 0 0 0;
+  background-color: var(--color-acento);
 
-      ul li {
-        list-style: none;
-        margin-bottom: 2rem;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: left;
+
+  overflow-y:auto;
+
+  ul li {
+    list-style: none;
+    margin-bottom: 2rem;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+}
+
+header nav.active {
+  right: 0;
+}
+
+main {
+  flex: 1;
+
+  background-color: var(--color-secundario);
+  padding: 1rem    ;
+}
+
+body button,
+body input,
+body label {
+  font-size: inherit;
+}
+
+.logform {
+  background-color: var(--color-blanco);
+  border: 1vw solid var(--color-acento);
+  border-radius: 3vw;
+  padding: 2% 30%;
+  text-align: center;
+  color: var(--color-acento);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.espaciado {
+  gap: 3vw;
+}
+
+.logform label {
+  margin-bottom: 5px;
+}
+
+.marco {
+  background-color: white; 
+  opacity: 90%;
+  border: 0.15rem solid var(--color-acento);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.logform select, .logform input {   
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 45px;
+  border: 2px solid var(--color-acento) !important;
+  border-radius: 4px;
+  font-size: inherit;
+  background: inherit;
+}
+
+.logform button {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.imagenEspera{
+  position:absolute;
+  bottom:0;
+  top:0;    
+  width:100%;
+  display:flex; 
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+  img{  
+    width: min(50vw,50vh);
+  }
+}
+
+footer {
+  position: fixed; /* Fija el footer en la parte inferior */
+  bottom: 0;
+  width: 100%;
+
+  height: 2rem;
+  background-color: var(--color-acento);
+  color: white;
+  }
+
+footer p {
+  margin: .2rem 5%;
+  font-size: 1rem;
+}
+
+.oculto {
+  display: none
+}
+
+.chiste {
+  margin: 4vw 0 4vw 0;
+  font-size: 1.5rem !important;
+}
+
+    /* desktop */
+    @media  (min-width: 900px) {
+      :root { 
+        font-size: 3vh;
       }
     }
 
-    header nav.active {
-      right: 0;
+    /* movil landscape */
+    @media (max-width: 900px) and (orientation: landscape)  {
+      :root { 
+        font-size: 4vh;
+      }
     }
 
-    main {
-      background-color: var(--color-secundario);
-      flex-grow: 1;
-      overflow: auto;
-      padding: 5%;
-    }
-
-    body button,
-    body input,
-    body label {
-      font-size: inherit;
-    }
-
-    .logform {
-      background-color: var(--color-blanco);
-      border: 1vw solid var(--color-acento);
-      border-radius: 3vw;
-      padding: 2% 30%;
-      text-allign: center;
-      color: var(--color-acento);
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-
-    .espaciado {
-      gap: 3vw;
-    }
-
-    .logform label {
-      margin-bottom: 5px;
-    }
-
-    .logform select, .logform input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 45px;
-      border: 2px solid var(--color-acento) !important;
-      ;
-      border-radius: 4px;
-      font-size: inherit;
-      background: inherit;
-    }
-
-    .logform button {
-      width: 100%;
-      padding: 15px;
-      background-color: var(--color-acento);
-      color: var(--color-blanco);
-
-      border: none;
-      border-radius: 20px;
-      cursor: pointer;
-    }
-
-    .contenedor {
-      height: auto;
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: space-between;
-      width: 100%;
-    }
-
-    .marco {
-      background-color: white; 
-      opacity: 90%;
-      border: 0.5vw solid var(--color-acento);
-      border-radius: 3vw;
-      padding: 4vw;
-      margin-bottom: 1vw;
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    .cuadro {
-      background-color: white; 
-      opacity: 90%;
-      border: 0.5vw solid var(--color-acento);
-      border-radius: 3vw;
-      margin-bottom: 1vw;
-      text-align: center;
-      box-sizing: border-box;
-
-      flex: 0 0 49.5%;
-      padding: 2vw;
-    }
-    
-    .cuadro :first-child {
-      margin: 0 0 1vw 0;
-      text-align: left;
-      font-size: 1rem;
-      font-weight: bold;
-      color: var(--color-acento);
-    }
-
-    .cuadro :nth-child(2) {
-      margin: 0 0 0 6vw;
-      font-size: 1.25rem;
-      font-weight: bold;
-      float: left;
-    }
-
-    .cuadro :last-child {
-      width: auto;
-      text-align: right;
-      float: right;
-      margin: 1vw 0 0 3vw;
-    }
-
-    footer {
-      height: calc(var(--header-size)*0.5);
-      background-color: var(--color-acento);
-      color: white;
-      display: flex;
-      position:sticky; 
-      bottom:0; 
-     align-items: center;
-    }
-
-    footer p {
-      font-size: calc(var(--header-size)*0.2);
-      padding: calc(var(--header-size)*0.2);
-    }
-
-    .oculto {
-      display: none
-    }
-
-    .chiste {
-      margin: 4vw 0 4vw 0;
-      font-size: 4vw !important;
-    }
-
-    @media (min-width: 1000px) {}
-
+/* desktop 
+@media (max-width: 850px) and (max-resolution: 2dppx) {}*/
